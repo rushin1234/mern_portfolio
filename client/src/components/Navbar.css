@@ -1,0 +1,68 @@
+
+/* navbar */
+.nav-container{
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px; 
+    width: 80%;
+    margin: 40px auto 0;
+}
+
+/* logo in left side */
+.logo-brand {
+    & a{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: blueviolet;
+    }
+}
+
+/* list in right side */
+ul{
+    display: flex; gap: 35px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    & li{
+        & a{
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: blueviolet;
+            position: relative;
+        }
+        & a::after{
+            content: "";
+            position: absolute;
+            bottom: 0; left: 0;
+            border-bottom: 2px solid blueviolet;
+            width: 0%;
+            transition: width 0.3s linear;
+        }
+        & a:hover::after{
+            width: 98%;
+        }
+        & a:hover{
+            color: hsl(0, 0%, 94%);
+        }
+    }
+}
+
+/* this class is applied when some nav link is active */
+.active{
+    color: white;
+    position: relative;
+}
+.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    border-bottom: 2px solid blueviolet;
+    width: 98%;
+}
+
+/* hamburger menu */
+#menu {
+    display: none;
+}

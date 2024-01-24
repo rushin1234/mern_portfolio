@@ -1,0 +1,43 @@
+
+
+/* in this css file we handle responsiveness */
+@media screen and (max-width: 500px) {
+
+    /* container class  */
+    .container{
+        flex-direction: column;
+        padding: 0px 10px 0;
+    }
+    .child{
+        margin: 50px 0;
+    }
+    .analytics{
+        flex-direction: column;
+    }
+    .analytic{
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+    }
+
+    /* changing navbar style  */
+    #menu {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 11;
+        color: blueviolet;
+    }
+    ul{
+        flex-direction: column;
+        position: absolute;
+        top: 10px; right: -20px;
+        background-color: gray;
+        height: 70vh;
+        width: 70vw;
+        justify-content: center;
+        border-radius: 0 0 90px 0;
+        transform: translate(0, -150%);
+        z-index: 10;
+        transition: all 0.3s linear;
+    }
+}
